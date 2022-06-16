@@ -14,32 +14,18 @@
     </tr>
   </thead>
   <tbody>
+    {% for contato in contatos %}
     <tr>
       <td>
-        <a href="#"> Theo</a>
+        <a href="#">{{ contato.nome }}</a>
       </td>
-      <td>Miranda</td>
-      <td>35 9 5555-5555</td>
-      <td>Família</td>
+      <td>{{ contato.sobrenome }}</td>
+      <td>{{ contato.telefone }}</td>
+      <td>{{ contato.categoria }}</td>
     </tr>
-    <tr>
-      <td>
-        <a href="#"> Sammy</a>
-      </td>
-      <td>Moreira</td>
-      <td>35 9 8888-5555</td>
-      <td>Família</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#"> Allyson</a>
-      </td>
-      <td>Oliveira</td>
-      <td>35 9 9999-4352</td>
-      <td>Conhecidos</td>
+    {% endfor %}
     </tr>
   </tbody>
 </table>
 
 {% endblock conteudo %}
-
